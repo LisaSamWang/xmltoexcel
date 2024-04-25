@@ -6,6 +6,13 @@ import zipfile
 import os
 import shutil
 from pyairtable import Table
+# Set the configuration for the Streamlit app page
+st.set_page_config(
+    page_title="Convertique",  # Sets the browser tab title
+    page_icon="📊",  # Sets the favicon to a bar chart emoji, you can use an image path instead
+    layout="wide",  # Optional: Use the "wide" layout
+    initial_sidebar_state="expanded",  # Optional: Start with an expanded sidebar
+)
 
 def parse_xml(xml_content):
     root = ET.fromstring(xml_content)
